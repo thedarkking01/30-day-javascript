@@ -1,13 +1,13 @@
 
 // Activity 1: Variable Declaration
 
-//Task 1: Declare a variable using `var`, assign it a number, and log the value to the console.**
+//Task 1: Declare a variable using `var`, assign it a number, and log the value to the console.
 
 var myNumber = 42;
 console.log(myNumber);  // Output: 42
 
 
-//Task 2: Declare a variable using `let`, assign it a string, and log the value to the console.**
+//Task 2: Declare a variable using `let`, assign it a string, and log the value to the console.
 
 let myString = "Hello, world!";
 console.log(myString);  // Output: Hello, world!
@@ -39,7 +39,7 @@ console.log(typeof arr);  // Output: object (arrays are objects in JavaScript)
 
 // Activity 4: Reassigning Variables
 
-//Task 5: Declare a variable using `let`, assign it an initial value, reassign a new value, and log both values to the console.**
+//Task 5: Declare a variable using `let`, assign it an initial value, reassign a new value, and log both values to the console.
 let myVar = "initial value";
 console.log(myVar);  // Output: initial value
 
@@ -49,7 +49,7 @@ console.log(myVar);  // Output: new value
 
 // Activity 5: Understanding `const`
 
-//Task 6: Try reassigning a variable declared with `const` and observe the error.**
+//Task 6: Try reassigning a variable declared with `const` and observe the error.
 
 const myConst = "immutable";
 // myConst = "new value";  // Uncommenting this line will cause an error: TypeError: Assignment to constant variable.
@@ -58,7 +58,7 @@ console.log(myConst);  // Output: immutable
 
 // Feature Request Scripts
 
-//1. Variable Types Console Log:**
+//1. Variable Types Console Log:
 
 // Script to declare variables of different data types and log both the value and type of each variable
 // var num = 42;
@@ -74,7 +74,7 @@ console.log(`obj: ${obj}, type: ${typeof obj}`);  // Output: obj: [object Object
 console.log(`arr: ${arr}, type: ${typeof arr}`);  // Output: arr: 1,2,3, type: object
 
 
-//2. Reassignment Demo:**
+//2. Reassignment Demo:
 
 // Script to demonstrate the difference in behavior between let and const when it comes to reassignment
 let myLet = "initial let value";
