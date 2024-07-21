@@ -1,0 +1,210 @@
+<!-- Activity 1: Selecting and Manipulating Elements -->
+
+<!-- Task 1: Select an HTML element by its ID and change its text content. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <p id="task1">Original Text</p>
+    <script>
+        document.getElementById('task1').textContent = 'Changed Text';
+    </script>
+</body>
+</html>
+
+<!-- Task 2: Select an HTML element by its class and change its background color. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        .task2 {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="task2">Background Color Change</div>
+    <script>
+        document.querySelector('.task2').style.backgroundColor = 'lightblue';
+    </script>
+</body>
+</html>
+
+<!-- Activity 2: Creating and Appending Elements -->
+
+<!-- Task 3: Create a new `div` element with some text content and append it to the body. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <script>
+        const newDiv = document.createElement('div');
+        newDiv.textContent = 'This is a new div';
+        document.body.appendChild(newDiv);
+    </script>
+</body>
+</html>
+
+<!-- Task 4: Create a new `li` element and add it to an existing `ul` list. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <ul id="task4-list">
+        <li>Existing Item 1</li>
+        <li>Existing Item 2</li>
+    </ul>
+    <script>
+        const newLi = document.createElement('li');
+        newLi.textContent = 'New List Item';
+        document.getElementById('task4-list').appendChild(newLi);
+    </script>
+</body>
+</html>
+
+<!-- Activity 3: Removing Elements -->
+
+<!-- Task 5: Select an HTML element and remove it from the DOM. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <p id="task5">This element will be removed</p>
+    <script>
+        const elementToRemove = document.getElementById('task5');
+        elementToRemove.parentNode.removeChild(elementToRemove);
+    </script>
+</body>
+</html>
+
+<!-- Task 6: Remove the last child of a specific HTML element. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+<body>
+    <ul id="task6-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        const list = document.getElementById('task6-list');
+        list.removeChild(list.lastElementChild);
+    </script>
+</body>
+</html>
+
+<!-- Activity 4: Modifying Attributes and Classes -->
+
+<!-- Task 7: Select an HTML element and change one of its attributes (e.g., `src` of an `img` tag). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+<body>
+    <img id="task7" src="old-image.jpg" alt="Old Image">
+    <script>
+        document.getElementById('task7').setAttribute('src', 'new-image.jpg');
+    </script>
+</body>
+</html>
+
+<!-- Task 8: Add and remove a CSS class to/from an HTML element. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <style>
+        .new-class {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="task8">This is a paragraph.</p>
+    <script>
+        const paragraph = document.getElementById('task8');
+        paragraph.classList.add('new-class');
+        setTimeout(() => {
+            paragraph.classList.remove('new-class');
+        }, 3000); // Remove the class after 3 seconds
+    </script>
+</body>
+</html>
+
+<!-- Activity 5: Event Handling -->
+
+<!-- Task 9: Add a click event listener to a button that changes the text content of a paragraph. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+<body>
+    <p id="task9-paragraph">Original Text</p>
+    <button id="task9-button">Change Text</button>
+    <script>
+        document.getElementById('task9-button').addEventListener('click', () => {
+            document.getElementById('task9-paragraph').textContent = 'Text Changed!';
+        });
+    </script>
+</body>
+</html>
+
+<!-- Task 10: Add a mouseover event listener to an element that changes its border color. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+    <style>
+        .task10-element {
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="task10-element">Hover over me</div>
+    <script>
+        const element = document.querySelector('.task10-element');
+        element.addEventListener('mouseover', () => {
+            element.style.borderColor = 'blue';
+        });
+        element.addEventListener('mouseout', () => {
+            element.style.borderColor = 'black';
+        });
+    </script>
+</body>
+</html>
