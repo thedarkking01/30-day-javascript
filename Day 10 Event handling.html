@@ -1,0 +1,141 @@
+<!-- Activity 1: Basic Event Handling -->
+
+<!-- Task 1: Add a click event listener to a button that changes the text content of a paragraph -->
+
+<button id="changeTextButton">Change Text</button>
+<p id="textParagraph">Original Text</p>
+
+<script>
+  document.getElementById('changeTextButton').addEventListener('click', function() {
+    document.getElementById('textParagraph').textContent = 'Text has been changed!';
+  });
+</script>
+
+
+<!-- Task 2: Add a double-click event listener to an image that toggles its visibility. -->
+
+<img id="toggleImage" src="image.jpg" alt="Sample Image" style="display: block;">
+
+<script>
+  document.getElementById('toggleImage').addEventListener('dblclick', function() {
+    const img = document.getElementById('toggleImage');
+    img.style.display = img.style.display === 'none' ? 'block' : 'none';
+  });
+</script>
+
+
+<!-- Activity 2: Mouse Events -->
+
+<!-- Task 3: Add a mouseover event listener to an element that changes its background color -->
+
+<div id="hoverElement" style="width: 100px; height: 100px; background-color: lightblue;">Hover over me!</div>
+
+<script>
+  document.getElementById('hoverElement').addEventListener('mouseover', function() {
+    this.style.backgroundColor = 'lightgreen';
+  });
+</script>
+
+<!-- Task 4: Add a mouseout event listener to an element that resets its background color -->
+
+<script>
+  document.getElementById('hoverElement').addEventListener('mouseout', function() {
+    this.style.backgroundColor = 'lightblue';
+  });
+</script>
+
+<!-- Activity 3: Keyboard Events -->
+
+<!-- Task 5: Add a keydown event listener to an input field that logs the key pressed to the console. -->
+
+<input id="keydownInput" type="text" placeholder="Type something...">
+
+<script>
+  document.getElementById('keydownInput').addEventListener('keydown', function(event) {
+    console.log('Key pressed: ', event.key);
+  });
+</script>
+
+<!-- Task 6: Add a keyup event listener to an input field that displays the current value in a paragraph. -->
+
+<p id="displayText"></p>
+
+<script>
+  document.getElementById('keydownInput').addEventListener('keyup', function() {
+    document.getElementById('displayText').textContent = this.value;
+  });
+</script>
+
+<!-- Activity 4: Form Events -->
+
+<!-- Task 7: Add a submit event listener to a form that prevents the default submission and logs the form data to the console. -->
+
+<form id="exampleForm">
+  <input type="text" name="username" placeholder="Username">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  document.getElementById('exampleForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    for (let [key, value] of formData.entries()) {
+      console.log(key, ':', value);
+    }
+  });
+</script>
+
+<!-- Task 8: Add a change event listener to a select dropdown that displays the selected value in a paragraph. -->
+<select id="dropdown">
+  <option value="Option 1">Option 1</option>
+  <option value="Option 2">Option 2</option>
+  <option value="Option 3">Option 3</option>
+</select>
+<p id="selectedValue"></p>
+
+<script>
+  document.getElementById('dropdown').addEventListener('change', function() {
+    document.getElementById('selectedValue').textContent = 'Selected: ' + this.value;
+  });
+</script>
+
+
+<!-- Activity 5: Event Delegation -->
+
+<!-- Task 9: Add a click event listener to a list that logs the text content of the clicked list item using event delegation. -->
+<ul id="itemList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  document.getElementById('itemList').addEventListener('click', function(event) {
+    if (event.target && event.target.nodeName === "LI") {
+      console.log('List item clicked:', event.target.textContent);
+    }
+  });
+</script>
+
+<!-- Task 10: Add an event listener to a parent element that listens for events from dynamically added child elements -->
+
+<div id="parentElement">
+  <!-- Dynamic elements will be added here -->
+</div>
+<button id="addElement">Add Element</button>
+
+<script>
+  document.getElementById('addElement').addEventListener('click', function() {
+    const newElement = document.createElement('div');
+    newElement.textContent = 'New Element';
+    newElement.classList.add('childElement');
+    document.getElementById('parentElement').appendChild(newElement);
+  });
+
+  document.getElementById('parentElement').addEventListener('click', function(event) {
+    if (event.target && event.target.classList.contains('childElement')) {
+      console.log('Dynamic child element clicked:', event.target.textContent);
+    }
+  });
+</script>
+
