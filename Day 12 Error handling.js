@@ -27,7 +27,6 @@ function divideNumbers(a, b) {
 console.log(divideNumbers(10, 2));  // 5
 console.log(divideNumbers(10, 0));  // Error
 
-
 // Activity 2: Finally Block
 
 //Task 3: Write a script that includes a try-catch block and a finally block. Log messages in the try, catch, and finally blocks to observe the execution flow.
@@ -42,12 +41,9 @@ function demonstrateFinallyBlock() {
     console.log("This will always execute, regardless of an error");
   }
 }
-
 demonstrateFinallyBlock();
 
-
 //Activity 3: Custom Error Objects
-
 //Task 4: Create a custom error class that extends the built-in Error class. Throw an instance of this custom error in a function and handle it using a try-catch block.
 
 class CustomError extends Error {
@@ -76,7 +72,6 @@ class ValidationError extends Error {
     this.name = "ValidationError";
   }
 }
-
 function validateInput(input) {
   try {
     if (!input || input.trim() === "") {
@@ -87,14 +82,12 @@ function validateInput(input) {
     console.error("Caught a validation error:", error.message);
   }
 }
-
 validateInput("");  // Error
 validateInput("Valid input");  // Valid input
 
 // Activity 4: Error Handling in Promises
 
 //Task 6: Create a promise that randomly resolves or rejects. Use `.catch()` to handle the rejection and log an appropriate message to the console.
-
 function randomPromise() {
   return new Promise((resolve, reject) => {
     const success = Math.random() > 0.5;
@@ -105,11 +98,9 @@ function randomPromise() {
     }
   });
 }
-
 randomPromise()
   .then((message) => console.log(message))
   .catch((error) => console.error("Caught an error:", error.message));
-
 
 //Task 7: Use try-catch within an async function to handle errors from a promise that randomly resolves or rejects, and log the error message.
 
@@ -121,7 +112,6 @@ async function handlePromise() {
     console.error("Caught an error:", error.message);
   }
 }
-
 handlePromise();
 
 // Activity 5: Graceful Error Handling in Fetch
