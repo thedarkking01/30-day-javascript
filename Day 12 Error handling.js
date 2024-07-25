@@ -85,7 +85,7 @@ function validateInput(input) {
 validateInput("");  // Error
 validateInput("Valid input");  // Valid input
 
-// Activity 4: Error Handling in Promises
+// Activity 4: Error Handling in Promises.....
 
 //Task 6: Create a promise that randomly resolves or rejects. Use `.catch()` to handle the rejection and log an appropriate message to the console.
 function randomPromise() {
