@@ -33,7 +33,7 @@ function createCounter() {
 const counter = createCounter();
 counter.increment();
 counter.increment();
-console.log(counter.getValue()); // Logs: 2
+console.log(counter.getValue()); //  2
 
 //Activity 2: Practical Closures
 
@@ -49,8 +49,8 @@ function createIdGenerator() {
 }
 
 const generateId = createIdGenerator();
-console.log(generateId()); // Logs: 1
-console.log(generateId()); // Logs: 2
+console.log(generateId()); //  1
+console.log(generateId()); //  2
 
 //Task 4: Create a closure that captures a user’s name and returns a function that greets the user by name.
 
@@ -81,11 +81,11 @@ function createFunctions() {
 }
 
 const functions = createFunctions();
-functions[0](); // Logs: 0
-functions[1](); // Logs: 1
-functions[2](); // Logs: 2
-functions[3](); // Logs: 3
-functions[4](); // Logs: 4
+functions[0](); //  0
+functions[1](); //  1
+functions[2](); //  2
+functions[3](); //  3
+functions[4](); //  4
 
 
 // Activity 4: Module Pattern
@@ -113,9 +113,9 @@ const itemManager = (function() {
 
 itemManager.addItem("item1");
 itemManager.addItem("item2");
-console.log(itemManager.listItems()); // Logs: ["item1", "item2"]
+console.log(itemManager.listItems()); // ["item1", "item2"]
 itemManager.removeItem("item1");
-console.log(itemManager.listItems()); // Logs: ["item2"]
+console.log(itemManager.listItems()); //  ["item2"]
 
 // Activity 5: Memoization
 
@@ -138,8 +138,8 @@ function add(a, b) {
 }
 
 const memoizedAdd = memoize(add);
-console.log(memoizedAdd(1, 2)); // Logs: 3
-console.log(memoizedAdd(1, 2)); // Logs: 3 (from cache)
+console.log(memoizedAdd(1, 2)); // 3
+console.log(memoizedAdd(1, 2)); //  3 (from cache)
 
 // Task 8:Create a memoized version of a function that calculates the factorial of a number.
 
@@ -163,5 +163,5 @@ function factorial(n) {
 }
 
 const memoizedFactorial = memoize(factorial);
-console.log(memoizedFactorial(5)); // Logs: 120
-console.log(memoizedFactorial(5)); // Logs: 120 (from cache)
+console.log(memoizedFactorial(5)); //  120
+console.log(memoizedFactorial(5)); //  120 (from cache)
