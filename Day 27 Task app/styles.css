@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #0c0c0c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,13 +33,13 @@ input, textarea, button {
 }
 
 button {
-    background-color: #28a745;
+    background-color: #d49923;
     color: #fff;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #236acc;
 }
 
 #task-list {
