@@ -2,19 +2,19 @@
 const products = [
     {
         name: "Product 1",
-        price: 29.99,
+        price: 2999,
         description: "Description for Product 1",
         image: "https://via.placeholder.com/150"
     },
     {
         name: "Product 2",
-        price: 49.99,
+        price: 4999,
         description: "Description for Product 2",
         image: "https://via.placeholder.com/150"
     },
     {
         name: "Product 3",
-        price: 19.99,
+        price: 1999,
         description: "Description for Product 3",
         image: "https://via.placeholder.com/150"
     }
@@ -31,7 +31,7 @@ function displayProducts() {
                 <img src="${product.image}" alt="${product.name}">
                 <h2>${product.name}</h2>
                 <p>${product.description}</p>
-                <p>$${product.price}</p>
+                <p>₹${product.price}</p>
                 <button onclick="addToCart('${product.name}')">Add to Cart</button>
             </div>
         `;
@@ -59,7 +59,7 @@ function updateCart() {
     cart.forEach((item, index) => {
         cartContainer.innerHTML += `
             <div class="cart-item">
-                <p>${item.name} - $${item.price} (x${item.quantity})</p>
+                <p>${item.name} - ₹${item.price} (x${item.quantity})</p>
                 <button onclick="removeFromCart(${index})">Remove</button>
             </div>
         `;
