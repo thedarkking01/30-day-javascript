@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #theme-toggle-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  #save-session, #clear-session, #save-local, #clear-local {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  #save-session:hover, #clear-session:hover, #save-local:hover, #clear-local:hover {
+    background-color: #27ae60;
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: white;
+  }
+  
+  .light-mode {
+    background-color: #fff;
+    color: black;
+  }
+  
